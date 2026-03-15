@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>FOOD WINS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--parte de arriba-->
+    <div class="seccion">
+        <nav class="aparatado">
+
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menu</a>
+            <a href="#contacto">Contacto</a>
+
+        </nav>
+
+        <script>
+
+            function agregarCarrito(nombre, precio) {
+
+                let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+                carrito.push({ nombre: nombre, precio: precio, cantidad: 1 });
+
+                localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            }
+
+        </script>
+        <!--Inicio-->
+        <section id="inicio">
+            <h1 class="titulo">FOOD WINS</h1>
+
+
+            <h2><p>La forma más fácil de disfrutar de la mejor comida, todo en uno.</h2></p>
+            <p> </p>
+            <div class="img">
+                <img src="descarga.jfif" />
+            </div>
+            
+            <h3>¿Quieres descubrir nuevas recetas y sabores?</h3>
+    </div>
+    <p></p>
+    <p>
+        Nuestros chefs están a tu disposición para ofrecerte una experiencia culinaria única y te darán los mejores consejos sobre nuestros platillos.
+
+        Conoce nuestro menú diseñado a la medida para satisfacer todos tus antojos.
+    </p>
+    <img src="IMG02.jfif" />
+
+    </section>
+    <section id="menu">
+        <h1 class="titulo">MENÚ DEL RESTAURANTE</h1>
+
+        <!-- ENTRADAS -->
+
+        <section class="Entrada">
+            <!--primera linea-->
+            <h2>Entradas</h2>
+            <div class="contenedor">
+                <div class="nachos">
+                    <img src="img38.jfif" class:"img1">
+                    <h3>Nachos</h3>
+                    <p>$100</p><p>480 kcal</p>
+                    <p>Totopos crujientes con queso derretido, pico de gallo que consta de cubitos de tomate, cebolla</p>
+                    <p>chile jalapeño, aguacate, limon y especias</p>
+                    <button onclick="agregarCarrito('Nachos',100)">Agregar</button>
+                    <a href="carrito.html">Ver carrito</a>
+
+
+                </div>
+
+                <div class="aros de cebolla">
+                    <img src="arosceb.jfif">
+                    <h3>Aros de Cebolla</h3>
+                    <p>$80     380 kcal</p>
+                    <p>Aros de cebolla empanizados, fritos, dorados y crujientes.</p>
+                    <button onclick="agregarCarrito('Aros de cebolla',80)">Agregar</button>
+                    <a href="carrito.html">Ver carrito</a>
+
+                </div>
+            </div>
+
+            <!--segunda linea-->
+            <div class="contenedor2">
+
+                <div class="dedos de queso">
+                    <img src="img1.webp" />
+                    <p>$96   306kcal </p>
+                    <p><h3>Dedos de queso</h3></p>
+                    <p>Bastones de harina rellenos de mozzarella empanizados con salsa de la casa.</p>
+                    <button onclick="agregarCarrito('Dedos de queso',96)">Agregar</button>
+                    <a href="carrito.html">Ver carrito</a>
+
+                </div>
+
+                <div class="banderillas">
+                    <img src="banderilla.jfif" class:"img1">
+                    <p>480 kcal  $200</p>
+                    <p><h3>Banderillas</h3></p>
+                    <p>Salchicha cubierta con masa crujiente estilo coreano, una con superficie de takis y otra coreana</p>
+                    <button onclick="agregarCarrito('Banderillas',200)">Agregar</button>
+                    <a href="carrito.html">Ver carrito</a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- TACOS -->
+        <!-- BONELESS -->
+
+        <section class="Boneless">
+
+            <h2>Boneless</h2>
+
+            <img class="banner" src="boneles.webp">
+            <p>780 kcal   $420</p>
+            <p>Jugosos trozos de pollo empanizado bañados en tu salsa favorita.</p>
+            <p>plato grande se puede escoger 3 tipos de salsa y 2 aderezos</p>
+
+            <
+
+
+            <div id="opciones">
+
+                <h3>Salsas</h3>
+
+                <label><input type="checkbox"> BBQ</label>
+                <label><input type="checkbox"> Bufalo</label>
+                <label><input type="checkbox"> Flaming Hot</label>
+                <label><input type="checkbox"> Mango habanero</label>
+                <label><input type="checkbox"> Mango bufalo</label>
+                <h3>Aderezos</h3>
+
+                <label><input type="checkbox"> Ranch</label>
+                <label><input type="checkbox"> Jalapeño</label>
+                <label><input type="checkbox"> Blue chesee</label>
+                <button onclick="agregarCarrito('boneless',420)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+            </div>
+
+            <!-- ESPECIALIDADES -->
+
+            <section class="Especialidades">
+
+                <h2>Especialidades</h2>
+
+
+                <div class=" contenedor">
+
+                    <div class=" producto">
+
+                        <img src="img6.webp">
+
+                        <p>1800kcal   $600</p>
+                        <p>Papas Asadas</p>
+                        <p>Papa rellena con pastor, queso, crema y mantequilla.</p>
+                        <button onclick="agregarCarrito('Papa asada',600)">Agregar</button>
+                        <a href="carrito.html">Ver carrito</a>
+                    </div>
+
+                    <div class=" producto">
+                        <img src="img8.webp">
+
+                        <p>350 kcal $80</p>
+                        <p> hot dog</p>
+                        <p>salchicha rellena de queso, envuelta con tocino crujiente con un pan suave</p>
+                        <p>que se le pone mayonesa, mostaza, cebolla, tomate y pepinillos</p>
+                        <button onclick="agregarCarrito('Hot dog'80,)">Agregar</button>
+                        <a href="carrito.html">Ver carrito</a>
+                    </div>
+
+                    <div class="producto">
+
+                        <img src="img9.webp">
+                        <p>500 kcal   $150</p>
+                        <p>Burrito </p>
+                        <p>tortilla de harina dorada y envuelta con carne, queso, aguacate, tomate y cebolla</p>
+                        <button onclick="agregarCarrito('Burrito',150)">Agregar</button>
+                        <a href="carrito.html">Ver carrito</a>
+                    </div>
+                </div>
+
+                <div class="contenedor">
+                    <div class="producto">
+                        <img src="img10.webp">
+                        <p>800 kcal   $900</p>
+                        <p>Costillas bbq</p>
+                        <p>Costillas ahumadas 20 horas, bañada en su jugo, con salsa BBQ</p>
+                        <button onclick="agregarCarrito('Costillas BBQ',900)">Agregar</button>
+                        <a href="carrito.html">Ver carrito</a>
+                    </div>
+
+                    <div class="producto">
+
+                        <img src="img11.webp">
+                        <p>250 kcal   $280</p>
+                        <p>chiles rellenos</p>
+                        <p>chile jalapeño relleno de carne, envuelto en una capa de harina y huevo, bañado en salsa casera </p>
+                        <button onclick="agregarCarrito('Chiles rellenos',280)">Agregar</button>
+                        <a href="carrito.html">Ver carrito</a>
+                    </div>
+                </div>
+
+                <img src="img12.webp">
+                <p>190 kcal  $60/u</p>
+                <p>Ratoncitos</p>
+                <p>chile jalapeño a la parrilla relleno de queso crema envuelto en tocino crujiente.  </p>
+                <button onclick="agregarCarrito('Ratoncitos',60)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+            </section>
+        </section>
+        <!-- COCTELERIA -->
+        
+            <section class="Cocteleria">
+
+                <h2>Coctelería</h2>
+
+                <img class="banner" src="img35.webp">
+                <p> </p>
+
+                <p>Vino Blanco $150 150ml</p>
+                <button onclick="agregarCarrito('Vino Blanco'150,)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+                <p>Vino Tinto   $200 150ml</p>
+                <button onclick="agregarCarrito('Vino tinto',200)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+                <img src="img13.webp">
+                <p>Michelada</p>
+                <p>Bebida con cerveza, jugo de limon, salsas negras, salsa picante, sal y clamato. </p>
+                <p>Topings</p>
+                <select>
+                    <option>Ostras $200</option>
+                    <option>Camaron $180</option>
+                    <option>Cacahuates con salsa  $160</option>
+                    <option>Pulpo  $250</option>
+                    <option>Gomitas dulces $120</option>
+                    <option>Gomitas picosas  $120</option>
+                    <option>Gomitas acidas  $120</option>
+                </select>
+                
+                <button onclick="agregarCarrito('Michelada',180)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+                <img src="img33.webp">
+                <p>$150</p>
+                <p>Piña Colada</p>
+                <p>Agua refrescante de piña con crema de coco y ron blanco</p>
+                <button onclick="agregarCarrito('Piña Colada',150)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <p> </p>
+                <img src="img15.webp">
+                <p>$450</p>
+                <p>Agua Loca</p>
+                <p>Agua fresca de limon arabe con un shot de un mezcal muy exclusivo</p>
+                <button onclick="agregarCarrito('Agua loca',450)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img16.webp">
+                <p>$120</p>
+                <p>Pulque</p>
+                <p>Bebida fermentada tradicional mexicana de maguey</p>
+                <button onclick="agregarCarrito('Pulque'120,)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+
+                <img src="img17.webp">
+                <p>$250</p>
+                <p>Pitufo</p>
+                <p>Bebida endulzada con refresco y 1 onza de vodka</p>
+                <button onclick="agregarCarrito('Pitufo'250,)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img18.webp">
+                <p>$120</p>
+                <p>Medios de seda</p>
+                <p>Bebida preparada con leche evaporada, licor de cafe y leche condesada.</p>
+                <button onclick="agregarCarrito('Medios de seda',120)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img19.webp">
+                <p>$130</p>
+                <p>Vampiro</p>
+                <p>Bebida preparada con tequila blanco, limon, sangrita y refresco de toronja.</p>
+                <button onclick="agregarCarrito('Vampiro',130)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img20.webp">
+                <p>$250</p>
+                <p>Cosmopolitan</p>
+                <p>Bebida preparada con vodka, licor de naranja, limon y arandano.</p>
+                <button onclick="agregarCarrito('Cosmopolitan',250)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img21.webp">
+                <p>$150</p>
+                <p>Cuba libre</p>
+                <p>Bebida con refresco de cola y ron</p>
+                <button onclick="agregarCarrito('Cuba Libre',150)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+
+                <img src="img25.webp">
+                <p>$150</p>
+                <p>Tequila Sunrise</p>
+                <p>Bebida preparada con tequila, jugo de naranja y granadina</p>
+                <button onclick="agregarCarrito('Tequila Sunrise',)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img26.webp">
+                <p>$250</p>
+                <p>Tom Collins</p>
+                <p>Bebida preparada con jarabe simple, ginebra, jugo de limon, agua mineral.</p>
+                <button onclick="agregarCarrito('Tom Collins',250)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img27.webp">
+                <p>$180</p>
+                <p>Margarita de menta</p>
+                <p>Bbebida preparada con tequila blanco, jugo de naranja, jugo de limon, hojas de menta y jarabe simple</p>
+                <button onclick="agregarCarrito('Margarita de menta',180)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+
+
+
+            </section>
+
+            <!-- BEBIDAS -->
+
+            <section class="Bebidas">
+
+                <h2>Bebidas</h2>
+
+                <img src="images.jfif">
+
+
+
+                <p>botella 600ml $35</p>
+                <button onclick="agregarCarrito('Botella coca',35)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <p>Lata 355ml $25</p>
+                <button onclick="agregarCarrito('Lata coca',25)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <select>
+                    <option>Light</option>
+                    <option>Zero</option>
+                    <option>Original</option>
+                </select>
+                <button onclick="agregarCarrito('Lata',25)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+
+                <p>Agua    $25/litro</p>
+                <button onclick="agregarCarrito('Agua',25)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <p>Seven up   $30</p>
+                <button onclick="agregarCarrito('Seven up',30)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <p>Pepsi     $30</p>
+                <button onclick="agregarCarrito('Pepsi',30)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <p>Sprite    $30</p>
+                <button onclick="agregarCarrito('Sprite',30)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+
+                <p>Dr Pepper   $30</p>
+                <button onclick="agregarCarrito('Dr Pepper',)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+
+
+                <p>Jarritos Ponche</p>
+                <p>$30</p>
+                <button onclick="agregarCarrito('Jarritos',30)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+                <p> </p>
+
+                <img src="img31.webp">
+                <p>$30</p>
+                <p>Agua fresca de limon</p>
+                <button onclick="agregarCarrito('Agua de Limon',30)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+                <p> </p>
+                <img src="img32.webp">
+                <p>$35</p>
+                <p>Agua fresca de limon con fresa</p>
+                <button onclick="agregarCarrito('Agua de Limon y Fresa',35)">Agregar</button>
+                <a href="carrito.html">Ver carrito</a>
+
+            </section>
+
+            <div class="recomendacion">
+
+
+                <p><strong>Fueron extremadamente profesionales, amables, serviciales y</strong></p>
+                <p><b>agradables durante toda nuestra visita. Estamos muy contentos</b></p>
+                <p><b>con la experiencia y con el servicio</b></p>
+                <img src="img001.jfif" />
+                <p>Cliente disfruto de su cena</p>
+            </div>
+
+
+
+            <section id="contacto"> </section>
+            <div class="sobre">
+                <p>
+                    Muchas gracias por visitar nuestro web de nuestro restaruante, esperemos y hallan tenido la mejor
+                    experiencia que les hallamos brindado
+                </p>
+                <p> </p>
+                <p>Estamos ubicados por:</p>
+                <p>col.americo rey,calle zaragosa.#275,reynosa,tamaulipas.</p>
+                <h2>nuestro contacto</h2>
+                <p>nos encuentras en todas las redes sociales como instagram, facebook y tiktok:</p>
+                <p>FOODWINS</p>
+                <p>Tambien recibimos criticas y felicitaciones al correo privado:</p>
+                Foodwins_Losmejores@gmail.com
+                <p>Muchas gracias por su preferencia</p>
+            </div>
+            <nav class="menu">
+
+                <a href="#">Inicio</a>
+                <a href="#">Menu</a>
+
+            </nav>
+</body>
+</html>

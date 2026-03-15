@@ -1,0 +1,129 @@
+body {
+    background: #0b0b0b;
+    font-family: Arial;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+.titulo {
+    font-size: 50px;
+    color: orange;
+    margin: 40px;
+    width: auto;
+    height: auto;
+}
+button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+    button:hover {
+        background: #555;
+    }
+.seccion {
+    height:500px;
+    background-image: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5) ), url("img002.webp");
+    background-size: cover;
+    background-position: center;
+    padding:1px;
+    color: white;
+}
+.img {
+    width: auto;
+    height:auto;
+}
+.Entrada {
+    margin: 60px;
+    padding: 30px;
+    background: #111;
+    border-radius: 15px;
+    border: 2px solid orange;
+}
+.contenedor{
+    display:flex;
+    justify-content:space-between;
+}
+.contenedor2 {
+    display: flex;
+    justify-content: space-between;
+}
+    .img1 {
+    width:auto;
+    height: auto;
+}
+#img3 {
+    width: 1px;
+    height: 1px;
+}    
+.Boneless {
+    margin:60px;
+    padding:30px;
+    background:#111;
+    border-radius:15px;
+    border:2px solid orange;
+}
+.Especialidades{
+    margin:60px;
+    padding:30px;
+    background:#111;
+    border-radius:15px;
+    border:2px solid orange;
+}
+.primera{
+    display:grid;
+    justify-content: space-between;
+}
+.Cocteleria {
+    margin: 60px;
+    padding: 30px;
+    background: #111;
+    border-radius: 15px;
+    border: 2px solid orange;
+}
+.Bebidas {
+    margin: 60px;
+    padding: 30px;
+    background: #111;
+    border-radius: 15px;
+    border: 2px solid orange;
+}
+.recomendacion {
+    margin: 60px;
+    padding: 30px;
+    background: lightgray;
+    border-radius: 15px;
+    border: 2px solid orange;
+    color:black;
+}
+.sobre {
+    margin: 60px;
+    padding: 30px;
+    background: lightgray;
+    border-radius: 15px;
+    border: 2px solid orange;
+   color:black;
+}
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+function agregarCarrito(nombre,precio) {
+    let productoExistente = carrito.find(p => p.nombre === nombre);
+    if(productoExistente)
+
+{
+    productoExistente .cantidad++;
+}
+
+else {
+    carrito .push({
+nombre:nombre,
+precio:precio,
+cantidad:1
+});
+}
+
+localStorage.setItem("carrito",JSON.stringify(carrito));
+
+alert("Producto agregado");
+}

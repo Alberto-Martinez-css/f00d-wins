@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Carrito</title>
+
+<style>
+
+body{
+font-family: Arial;
+}
+
+.item{
+border-bottom:1px solid gray;
+padding:10px;
+}
+
+button{
+margin-left:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🛒 Tu carrito</h1>
+
+<div id="carrito"></div>
+
+<h2 id="total"></h2>
+
+<a href="index.html">Seguir comprando</a>
+
+<script>
+
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+let contenedor = document.getElementById("carrito");
+
+let total = 0;
+
+function mostrarCarrito(){
+
+contenedor.innerHTML = "";
+
+total = 0;
+
+carrito.forEach((producto,index)=>{
+
+let div = document.createElement("div");
+
+div.className="item";
+
+div.innerHTML = `
+${producto.nombre} - $${producto.precio}
+Cantidad: ${producto.cantidad}
+<button onclick="eliminar(${index})">Eliminar</button>
+`;
+
+contenedor.appendChild(div);
+
+total += producto.precio * producto.cantidad;
+
+});
+
+document.getElementById("total").innerText =
+"Total a pagar: $" + total;
+
+}
+
+function eliminar(index){
+
+carrito.splice(index,1);
+
+localStorage.setItem("carrito",JSON.stringify(carrito));
+
+mostrarCarrito();
+
+}
+
+mostrarCarrito();
+
+</script>
+
+</body>
+</html>
